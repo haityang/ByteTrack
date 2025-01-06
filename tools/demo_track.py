@@ -309,8 +309,9 @@ def main(exp, args):
         vis_folder = osp.join(output_dir, "track_vis")
         os.makedirs(vis_folder, exist_ok=True)
 
-    if args.trt:
-        args.device = "gpu"
+    # if args.trt:
+    #     args.device = "gpu"
+    args.device = "cpu"
     args.device = torch.device("cuda" if args.device == "gpu" else "cpu")
 
     logger.info("Args: {}".format(args))

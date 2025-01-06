@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    //"exps/example/mot/yolox_x_mix_det.py"
+    //"pretrained/bytetrack_x_mot17.pth.tar",
+
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ByteTrack",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/tools/demo_track.py",
+            "console": "integratedTerminal",
+            "args": [
+                "video",
+                "-f",
+                "exps/example/mot/yolox_nano_mix_det.py",
+                "-c",
+                "pretrained/bytetrack_nano_mot17.pth.tar",
+                "--fp16",
+                "--fuse",
+                "--save_result"
+            ],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
